@@ -1,1 +1,4 @@
 # machine-learning
+数据集train.csv和test.csv来自天池金融数据分析赛：银行客户认购产品预测
+由于test.csv没有结果标签，所以将train.csv数据集重新划分为一个训练集和一个测试集
+代码中可以通过不同的设置来选择模型，并绘制ROC曲线图
