@@ -92,8 +92,11 @@ model=DecisionTree(x_train,y_train)  #0.8779259259259259
 #model=svm_poly(x_train,y_train)      #0.8694814814814815
 
 score=model.score(x_test,y_test)
-y_pre=model.predict_proba((x_test))[:,1]
 y_label=np.array(y_test)
+#决策树 朴素贝叶斯计算y_pre
+#y_pre=model.predict_proba((x_test))[:,1]
+#SVM计算y_rpe
+y_pre=model.decision_function(x_test)
 print(y_pre)
 print(y_label)
 print(score)
